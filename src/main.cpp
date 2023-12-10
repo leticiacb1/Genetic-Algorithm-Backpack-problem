@@ -1,8 +1,8 @@
-#include "../utils/optimize.h"
-#include "../utils/crossover.h"
-#include "../utils/fitness.h"
-#include "../utils/selection.h"
-#include "../utils/mutation.h"
+#include "utils/optimize.h"
+#include "utils/crossover.h"
+#include "utils/fitness.h"
+#include "utils/selection.h"
+#include "utils/mutation.h"
 
 #include <iostream>
 #include <cstdlib>
