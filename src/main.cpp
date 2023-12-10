@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 void printParameters(const std::vector<std::vector<int>>& parameters) {
     std::cout << "Indivíduo da última geração com maior fitness:" << std::endl;
@@ -43,15 +44,19 @@ void printSelectedItems(const std::vector<int>& item_number, const std::vector<s
 }
 
 int main() {
+
+    /* ----- Parâmetros -----*/
     int num_items = 40;
-    int item_number[num_items];
-    int weight[num_items];
-    int value[num_items];
     int knapsack_capacity = 100;
 
     int solutions_per_pop = 16;
     int num_generations = 1000;
 
+    std::vector<int> item_number(num_items);
+    std::vector<int> weight(num_items);
+    std::vector<int> value(num_items);
+    
+     /* ----- Inicialização -----*/
     srand(time(0));
     for (int i = 0; i < num_items; ++i) {
         item_number[i] = i + 1;
@@ -59,7 +64,6 @@ int main() {
         value[i] = rand() % 99 + 1; 
     }
 
-    // Imprimir os possíveis itens
     std::cout << "Possíveis itens:" << std::endl;
     std::cout << "Item\tPeso\tValor" << std::endl;
     for (int i = 0; i < num_items; ++i) {
