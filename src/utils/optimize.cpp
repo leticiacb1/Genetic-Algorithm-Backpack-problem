@@ -4,9 +4,9 @@
 #include "crossover.h"
 #include "mutation.h"
 
-
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> optimize(const std::vector<int>& weight,
                                                                                   const std::vector<int>& value,
