@@ -50,6 +50,7 @@ int main() {
     int knapsack_capacity = 100;
 
     int solutions_per_pop = 16;
+    int num_generations = 1000;
 
     srand(time(0));
     for (int i = 0; i < num_items; ++i) {
