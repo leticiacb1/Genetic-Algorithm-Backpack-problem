@@ -75,7 +75,7 @@ int main() {
 
     // Inicialização da população inicial
     srand(time(0));
-    int initial_population[solutions_per_pop][num_items];
+    std::vector<std::vector<int>> initial_population(solutions_per_pop, std::vector<int>(num_items));
     for (int i = 0; i < solutions_per_pop; ++i) {
         for (int j = 0; j < num_items; ++j) {
             initial_population[i][j] = rand() % 2; // Valores aleatórios 0 ou 1
@@ -92,10 +92,7 @@ int main() {
     }
 
 
-    std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> result = optimize(weight, value, initial_population, pop_size, num_generations, knapsack_capacity);
-
-    std::vector<std::vector<int>> parameters = result[0];
-    std::vector<std::vector<int>> fitness_history = result[1];
+    auto [parameters, fitness_history] = optimize(weight, value, initial_population, pop_size, num_generations, knapsack_capacity);
 
     printParameters(parameters);
     printSelectedItems(item_number, parameters, weight);
