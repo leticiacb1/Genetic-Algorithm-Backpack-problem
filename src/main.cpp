@@ -103,9 +103,9 @@ int main() {
         for (size_t j = 0; j < fitness_history[i].size(); ++j) {
 
             if(i != fitness_history.size() - 1){
-                std::cout << fitness_history[i][j]  << " , " << std::endl;
+                std::cout << fitness_history[i][j]  << " , ";
             }else{
-                std::cout << fitness_history[i][j] << std::endl;
+                std::cout << fitness_history[i][j];
             }
 
         }
