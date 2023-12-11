@@ -98,9 +98,8 @@ int main() {
     printSelectedItems(item_number, parameters, weight);
     
     std::cout << "\n  > Fitness_History : \n";
-    std::cout << "Fitness da última geração:" << std::endl;
     for (size_t i = 0; i < fitness_history.size(); ++i) {
-        std::cout << "Indivíduo[" << i << "]: ";
+        std::cout << "[";
         for (size_t j = 0; j < fitness_history[i].size(); ++j) {
 
             if(i != fitness_history.size() - 1){
@@ -109,9 +108,8 @@ int main() {
                 std::cout << fitness_history[i][j] << std::endl;
             }
 
-            std::cout << fitness_history[i][j] << " ";
         }
-        std::cout << std::endl;
+        std::cout <<  "]" <<std::endl;
     }
 
     std::cout << "\n > Num_generations : " <<  num_generations << std::endl;
