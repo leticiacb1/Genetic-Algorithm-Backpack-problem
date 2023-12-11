@@ -96,7 +96,17 @@ int main() {
 
     printParameters(parameters);
     printSelectedItems(item_number, parameters, weight);
+    
+    std::cout << "\n  > Fitness_History : \n";
+    for (size_t i = 0; i < fitness_history.size(); ++i) {
+        if(i != fitness_history.size() - 1){
+            std::cout << fitness_history[i]  << " , " << std::endl;
+        }else{
+            std::cout << fitness_history[i] << std::endl;
+        }
+    }
 
+    std::cout << "\n > Num_generations : " <<  num_generations << std::endl;
 
     return 0;
 }
