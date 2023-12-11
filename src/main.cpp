@@ -99,7 +99,7 @@ int main() {
     
     std::cout << "\n  > Fitness_History : \n";
     for (size_t i = 0; i < fitness_history.size(); ++i) {
-        
+        std::cout <<  "[" <<std::endl;
         for (size_t j = 0; j < fitness_history[i].size(); ++j) {
 
             if(j < fitness_history.size() - 1){
@@ -109,7 +109,7 @@ int main() {
             }
 
         }
-        std::cout <<  ":" <<std::endl;
+        std::cout <<  "]:" <<std::endl;
     }
 
     std::cout << "\n > Num_generations : " <<  num_generations << std::endl;
