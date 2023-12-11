@@ -102,7 +102,7 @@ int main() {
         std::cout << "[";
         for (size_t j = 0; j < fitness_history[i].size(); ++j) {
 
-            if(j != fitness_history.size() - 2){
+            if(j < fitness_history.size() - 1){
                 std::cout << fitness_history[i][j]  << " , ";
             }else{
                 std::cout << fitness_history[i][j];
