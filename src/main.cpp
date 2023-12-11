@@ -70,7 +70,7 @@ int main() {
         std::cout << item_number[i] << "\t" << weight[i] << "\t" << value[i] << std::endl;
     }
 
-    int pop_size[2] = {solutions_per_pop, num_items};
+    std::vector<int> pop_size = {solutions_per_pop, num_items};
     std::cout << "Tamanho da população = {" << pop_size[0] << ", " << pop_size[1] << "}" << std::endl;
 
     // Inicialização da população inicial
